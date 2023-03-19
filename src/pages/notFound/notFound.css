@@ -1,0 +1,12 @@
+.not-found-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+}
+.not-found-img{
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+}

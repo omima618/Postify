@@ -1,13 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #0F172A;
+    color: #F8FAFC;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main{
+    min-height: calc(100vh - 136px);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img{ 
+    user-select: none;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.2;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+section{
+    padding: 3rem 0;
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none; 
+}
+
+@media (width <= 992px) {
+    html{
+        font-size: 14px;
+    }
+}
+@media (width <= 768px) {
+    html{
+        font-size: 12px;
+    }
 }

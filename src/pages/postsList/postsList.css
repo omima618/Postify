@@ -1,0 +1,18 @@
+.section-title-wrapper{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-desc{
+    width: 60%;
+    min-width: 300px;
+    margin: 0 auto;
+    color: #dbdde0;
+}
+
+.posts-wrapper{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
