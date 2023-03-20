@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ColoredButton = () => {
     return (
         <Link
-            to='/postify'
+            to='/'
             className='go-home-btn'
             onClick={window.scroll({ top: 0 })}
         >
