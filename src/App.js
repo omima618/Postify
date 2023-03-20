@@ -43,19 +43,6 @@ function App() {
                             path='*'
                             element={<NotFound />}
                         />
-                        {/* FOR GITHUB PAGES */}
-                        <Route
-                            path='/postify'
-                            element={<PostsList />}
-                        />
-                        <Route
-                            path='/postify/post-details/:id'
-                            element={<PostDetails />}
-                        />
-                        <Route
-                            path='/postify/posts/:keyword'
-                            element={<SearchResults />}
-                        />
                     </Routes>
                 </main>
                 <Footer />

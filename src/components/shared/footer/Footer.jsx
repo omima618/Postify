@@ -7,7 +7,7 @@ const Footer = () => {
         <footer>
         <div className= "container">
             &copy; All rights reserved
-            <Link to='/postify' className="special-text"> Postify </Link>
+            <Link to='/' className="special-text"> Postify </Link>
             {currentYear}
         </div>
         </footer>

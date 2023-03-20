@@ -4,7 +4,7 @@ import "./button.css"
 const Button = ({ buttonContent, id }) => {
     return (
         <Link
-            to={`/postify/post-details/${id}`}
+            to={`/post-details/${id}`}
             className='main-btn'
             onClick={() => {
                 window.scroll({ top: 0 });

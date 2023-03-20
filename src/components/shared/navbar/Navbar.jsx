@@ -11,7 +11,7 @@ const Navbar = () => {
 
     const submitSearch = (e) => {
         e.preventDefault();
-        navigate(`/postify/posts/${keyword}`);
+        navigate(`/posts/${keyword}`);
         setKeyword('');
         window.scroll({top : 0})
     };
@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <nav>
             <div className='container'>
-                <Link to='/postify'>
+                <Link to='/'>
                     <img
                         className='logo'
                         src={Logo}
