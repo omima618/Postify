@@ -17,7 +17,7 @@ const SearchResults = () => {
     useEffect(() => {
         setSearchResults([]);
         const results = JSON.parse(JSON.stringify(posts)).filter((post) => {
-            return post.title.includes(keyword);
+            return post.title.includes(keyword.toLowerCase());
         });
         setSearchResults(results);
         setIsSearching(false);
