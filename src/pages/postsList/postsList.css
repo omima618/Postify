@@ -12,7 +12,7 @@
 
 .posts-wrapper{
     display: flex;
-    gap: 40px;
+    gap: 35px;
     flex-wrap: wrap;
     padding: 2rem 0;
 }

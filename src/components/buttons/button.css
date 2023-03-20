@@ -1,6 +1,7 @@
-.main-btn {
+.main-btn,
+.go-home-btn {
     display: block;
-    margin-top: 15px;
+    margin: 15px auto 0;
     padding: 0.8rem 2rem;
     border: 1px solid #c9d2e585;
     border-radius: 30px;
@@ -18,5 +19,17 @@
 .main-btn:hover {
     border: 1px solid #182947;
     background-color: #182947;
+    scale: 1.1;
+}
+.go-home-btn {
+    margin: 0 auto;
+    background-color: #0EA5E9;
+    color: #0F172A;
+    border-color: #0EA5E9;
+}
+
+.go-home-btn:hover {
+    background-color: transparent;
+    color: #0EA5E9;
     scale: 1.1;
 }

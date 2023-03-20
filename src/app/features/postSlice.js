@@ -14,7 +14,6 @@ const initialState = {
 const getAllPosts = createAsyncThunk('posts/getPosts', async (_, thunkAPI) => {
     try {
         const { data } = await postsDB().get();
-        console.log(data);
         return data;
     } catch (error) {
         const message = error.message;
@@ -25,7 +24,6 @@ const getAllPosts = createAsyncThunk('posts/getPosts', async (_, thunkAPI) => {
 const getPostDetails = createAsyncThunk('posts/getPostDetails', async (id, thunkAPI) => {
     try {
         const { data } = await postsDB().get(`/${id}`);
-        console.log(data);
         return data;
     } catch (error) {
         const message = error.message;

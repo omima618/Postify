@@ -13,7 +13,6 @@ const initialState = {
 const getPostComments = createAsyncThunk('comments/getComments', async ({id}, thunkAPI) => {
     try {
         const  {data}  = await commentsDB(id).get();
-        console.log(data);
         return data;
     } catch (error) {
         const message = error.message;

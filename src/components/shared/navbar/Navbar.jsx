@@ -1,14 +1,21 @@
 import Logo from '../../../assets/images/logo.png';
 import './navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
     const [keyword, setKeyword] = useState('');
     const [showSearchBar, setShowSearchBar] = useState(false);
 
-    // const searchHandler = (keyword) => {}
-    
+    const submitSearch = (e) => {
+        e.preventDefault();
+        navigate(`/postify/posts/${keyword}`);
+        setKeyword('');
+        window.scroll({top : 0})
+    };
+
     return (
         <nav>
             <div className='container'>
@@ -30,15 +37,24 @@ const Navbar = () => {
                     <i className='fa-solid fa-magnifying-glass'></i>
                 </span>
                 <div className={`${showSearchBar && 'show-search-bar'} search-bar-wrapper`}>
-                    <input
-                        type='search'
-                        value={keyword}
-                        placeholder='Search By Post Title...'
-                        onChange={(e) => setKeyword(e.value)}
-                    />
-                    <span className='search-btn search-icon'>
-                        <i className='fa-solid fa-magnifying-glass'></i>
-                    </span>
+                    <form
+                        className='search-form'
+                        onSubmit={submitSearch}
+                    >
+                        <input
+                            type='search'
+                            value={keyword}
+                            placeholder='Search By Post Title...'
+                            required
+                            onChange={(e) => setKeyword(e.target.value.trim())}
+                        />
+                        <button
+                            type='submit'
+                            className='search-btn search-icon'
+                        >
+                            <i className='fa-solid fa-magnifying-glass'></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </nav>

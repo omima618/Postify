@@ -1,12 +1,12 @@
 .post-card {
-    width: calc((100% - 80px) / 3);
+    width: calc((100% - 70px) / 3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 0.7rem;
     padding: 0 20px 20px;
-    background-color: #c9d2e551;
+    background-color: #ffffff51;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -53,7 +53,7 @@
 .post-card .post-desc{
     max-width: 100%;
     overflow: hidden;
-    color: #dbdde0;
+    color: #bebebe;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -62,7 +62,7 @@
 
 @media (width <=1100px) {
     .post-card {
-        width: calc((100% - 40px) / 2);
+        width: calc((100% - 35px) / 2);
     }
 }
 

@@ -7,6 +7,7 @@ import { postsRequests } from './app/features/postSlice';
 import PostsList from './pages/postsList/PostsList';
 import PostDetails from './pages/postDetails/PostDetails';
 import NotFound from './pages/notFound/NotFound';
+import SearchResults from './pages/searchResults/searchResults';
 
 // COMPONENTS
 import Navbar from './components/shared/navbar/Navbar';
@@ -35,6 +36,10 @@ function App() {
                             element={<PostDetails />}
                         />
                         <Route
+                            path='/posts/:keyword'
+                            element={<SearchResults />}
+                        />
+                        <Route
                             path='*'
                             element={<NotFound />}
                         />
@@ -46,6 +51,10 @@ function App() {
                         <Route
                             path='/postify/post-details/:id'
                             element={<PostDetails />}
+                        />
+                        <Route
+                            path='/postify/posts/:keyword'
+                            element={<SearchResults />}
                         />
                     </Routes>
                 </main>
