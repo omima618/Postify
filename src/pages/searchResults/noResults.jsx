@@ -6,7 +6,7 @@ import { useParams } from 'react-router';
 
 const NoResults = () => {
     return (
-        <div className='no-results-wrapper'>
+        <section className='no-results-wrapper'>
             <div className='img-wrapper'>
                 <img
                     src={noResultsImg}
@@ -18,7 +18,7 @@ const NoResults = () => {
                 <span className='keyword'> "{useParams().keyword}" </span>
             </p>
             <GoHomeButton />
-        </div>
+        </section>
     );
 };
 

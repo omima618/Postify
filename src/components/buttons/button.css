@@ -22,6 +22,7 @@
     scale: 1.1;
 }
 .go-home-btn {
+    font-size: 1.2rem;
     margin: 0 auto;
     background-color: #0EA5E9;
     color: #0F172A;
@@ -31,5 +32,4 @@
 .go-home-btn:hover {
     background-color: transparent;
     color: #0EA5E9;
-    scale: 1.1;
 }
