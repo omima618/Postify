@@ -9,7 +9,6 @@ const PostCard = ({ postId, postTitle, postDesc, userData }) => {
                 <img
                     src={userData.userAvatar}
                     alt='User Avatar'
-                    loading='lazy'
                 />
             </div>
             <span className='user-name'>{ userData.userName }</span>

@@ -8,7 +8,6 @@ const Comment = ({ userName, userEmail, userAvatar, commentBody }) => {
                     className='user-avatar'
                     src={userAvatar}
                     alt='User Avatar'
-                    loading='lazy'
                 />
                 <div className='comment-user-info'>
                     <span className='user-name'>{userName}</span>

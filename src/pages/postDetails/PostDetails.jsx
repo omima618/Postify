@@ -36,7 +36,6 @@ const PostDetails = () => {
                                         className='user-avatar'
                                         src={currentPost.userData.userAvatar}
                                         alt='User Avatar'
-                                        loading='lazy'
                                     />
                                     <span className='user-name'>{currentPost.userData.userName}</span>
                                 </>
