@@ -71,11 +71,18 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media (width <= 992px) {
     html{
+        font-size: 15px;
+    }
+}
+
+@media (width <= 768px) {
+    html{
         font-size: 14px;
     }
 }
-@media (width <= 768px) {
+
+@media (width <= 400px) {
     html{
-        font-size: 12px;
+        font-size: 13px;
     }
 }

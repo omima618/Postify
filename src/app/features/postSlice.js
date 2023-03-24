@@ -9,6 +9,7 @@ const initialState = {
     isSuccess: false,
     isError: false,
     message: '',
+    paginate: 1,
 };
 
 const getAllPosts = createAsyncThunk('posts/getPosts', async (_, thunkAPI) => {
@@ -42,6 +43,12 @@ const postSlice = createSlice({
         resetCurrentPost: (state) => {
             state.isLoading = false;
             state.currentPost = {};
+        },
+        setPaginate(state, action) {
+            state.paginate = action.payload;
+        },
+        resetPaginate(state) {
+            state.paginate = 1;
         },
     },
     extraReducers: (builder) => {
