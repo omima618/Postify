@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { postsDB } from '../axios/axios';
+import users from '../../users';
 
 const initialState = {
     posts: [],
@@ -57,9 +58,10 @@ const postSlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(getAllPosts.fulfilled, (state, action) => {
-                state.isLoading = false;
                 state.isSuccess = true;
                 state.posts = action.payload;
+                state.posts.forEach((post)=>{post.userData = users()[post.userId - 1]})
+                state.isLoading = false;
             })
             .addCase(getAllPosts.rejected, (state, action) => {
                 state.isLoading = false;
@@ -70,9 +72,9 @@ const postSlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(getPostDetails.fulfilled, (state, action) => {
-                state.isLoading = false;
                 state.isSuccess = true;
-                state.currentPost = action.payload;
+                state.currentPost = { ...action.payload, userData: users()[action.payload.userId - 1] };
+                state.isLoading = false;
             })
             .addCase(getPostDetails.rejected, (state, action) => {
                 state.isLoading = false;

@@ -1,5 +1,4 @@
 import './postDetails.css';
-import userDefaultAvatar from '../../assets/images/user-default-avatar.png';
 import Comment from '../../components/comment/Comment';
 import Spinner from '../../components/spinner/Spinner';
 
@@ -31,12 +30,17 @@ const PostDetails = () => {
                 <section className='post-details'>
                     <div className='post-details-wrapper'>
                         <div className='user-info'>
-                            <img
-                                className='user-avatar'
-                                src={userDefaultAvatar}
-                                alt='User Avatar'
-                            />
-                            <span className='user-name'>John Doe</span>
+                            {currentPost.userData && (
+                                <>
+                                    <img
+                                        className='user-avatar'
+                                        src={currentPost.userData.userAvatar}
+                                        alt='User Avatar'
+                                        loading='lazy'
+                                    />
+                                    <span className='user-name'>{currentPost.userData.userName}</span>
+                                </>
+                            )}
                         </div>
                         <div className='post-info'>
                             <h3 className='post-title'>{currentPost.title}</h3>
@@ -54,6 +58,7 @@ const PostDetails = () => {
                                                 key={comment.id}
                                                 userName={comment.name}
                                                 userEmail={comment.email}
+                                                userAvatar={comment.userAvatar}
                                                 commentBody={comment.body}
                                             />
                                         );

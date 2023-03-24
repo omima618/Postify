@@ -22,6 +22,7 @@
 .user-info .user-avatar {
     width: 110px;
     height: 110px;
+    padding: 5px;
     overflow: hidden;
     box-shadow: 0 3px 5px #fbfcfead, 0 -3px 5px #fbfcfead;
     border-radius: 50%;

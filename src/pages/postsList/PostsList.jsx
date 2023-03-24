@@ -44,6 +44,7 @@ const PostsList = () => {
                                 postId={post.id}
                                 postTitle={post.title}
                                 postDesc={post.body}
+                                userData={post.userData}
                             />
                         );
                     })}

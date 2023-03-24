@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import {commentsDB} from '../axios/axios';
+import { commentsDB } from '../axios/axios';
+import users from '../../users';
+
 
 const initialState = {
     comments: [],
@@ -35,9 +37,10 @@ const commentsSlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(getPostComments.fulfilled, (state, action) => {
-                state.isLoading = false;
                 state.isSuccess = true;
                 state.comments = action.payload;
+                state.comments.forEach((comment) => (comment.userAvatar = users()[Math.floor(Math.random() * users().length)].userAvatar));
+                state.isLoading = false;
             })
             .addCase(getPostComments.rejected, (state, action) => {
                 state.isLoading = false;
